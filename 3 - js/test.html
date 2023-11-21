@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testik</title>
+    
+</head>
+<body>
+    <h1 id="nadpis">Zadej slovo:</h1>
+    <input type="text" id="input" />
+        <button id="tlacitko">Přidej slovo</button>
+    <h2 id="nadpis2">Seznam slov:</h2>
+        <button id="button">Zavolej popelku</button>
+    <h2>Krátká slova:</h2>
+    <h2>Dlouhá slova:</h2><br><br><br><br>
+    <h1 id="nadpis5">Jak moc mě bavil tento úkol❤️</h5>
+        <input type="text" id="input2" /> 
+        <button id="tlacitko2">Hodnocení</button>
+        <div id="nevim"></div>
+
+     <script>
+        /// hodnocení
+   let input2 = document.getElementById ("input2")
+   let tlacitko2 = document.getElementById ("tlacitko2")
+   let nevim = document.getElementById ("nevim")
+   nevim.addEventListener ("click",nechci)
+    function nechci(){
+        let message = "❤️"
+        let newMessage = "";
+    for(let i=0; i< input2.value; i++){
+        newMessage += message;
+    }
+    nevim.innerText = newMessage
+    }
+
+
+    /// zadej slovo
+    let input = document.getElementById ("input")
+    let tlacitko = document.getElementById ("tlacitko")
+    let nadpis2 = document.getElementById ("#nadpis2")
+    
+
+     </script>
+    
+</body>
+</html>

@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>darkmode</title>
+    <link rel="stylesheet" href="darkmode.css">
+    <script src="darkmode.js" defer></script>
+    
+</head>
+
+<style>
+    body {
+    text-align: center;
+    background-color: rgb(31, 34, 50);
+}
+
+.main-header {
+    color: rgb(188, 158, 193);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.jednicka {
+    color: rgb(188, 158, 193);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#mesic {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: 50px;
+    right: 650px;
+}
+
+.subheading {
+    color: rgb(227, 186, 198);
+    font-family: 'Roboto Slab', serif;
+}
+
+#second {
+    display: none;
+}
+
+.dvojec {
+    color: rgb(227, 186, 198);
+    font-family: 'Roboto Slab', serif;
+}
+
+#slunko {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: 50px;
+    right: 650px;
+}
+</style>
+
+<body>
+    <div id="first">
+        <img src="moon.png" alt=""
+        class="img" id="mesic">
+        <p>
+            <h1 class="main-header">ÚKOL NEVIM NA KDY</h1>
+            <div class="jednicka">
+                Nemám na to nervy, protože se mi to už tak 5x smazalo a celý zavřelo. :/
+            </div>
+            <button class="tlacitko">KLIKOŠ</button>
+        </p>
+    </div>
+    <div id="second">
+        <img src="contrast.png" alt=""
+        class="img" id="slunko">
+        <p>
+            <h1 class="subheading">ÚKOL NEVIM NA KDY</h1>
+            <div class="dvojec">
+                Nemám na to nervy, protože se mi to už tak 5x smazalo a celý zavřelo. :/
+            </div>
+            <button class="tlacitko">KLIKOŠ</button>
+        </p>
+    </div>
+</body>
+<script>
+    const mesic = document.querySelector("#mesic")
+        const slunko = document.querySelector("#slunko")
+        mesic.addEventListener("click", changemesic)
+        slunko.addEventListener("click", changeslunko)
+
+        function changemesic() {
+            first.style.display = "none";
+            second.style.display = "block";
+            document.body.style.backgroundColor = "#BC9EC1";
+        }
+        function changeslunko() {
+            second.style.display = "none";
+            first.style.display = "block";
+            document.body.style.backgroundColor = "#1F2232";
+        }
+</script>
+</html>

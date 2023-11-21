@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+
+.nadpis {
+    background-color: pink;
+    color: white;
+    display: block;
+    width: 150px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 50px;
+}
+
+.vse {
+    text-align: center;
+}
+chci jit domu, uz me to tu nebavi 

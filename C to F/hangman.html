@@ -1,0 +1,64 @@
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="hangman.js" defer></script>
+    </head>
+
+    <body>
+        <h1 id="nadpis">Hádej nebo něco</h1>
+        <input type="text" id="input" />
+        <button id="tlacitko">Hádání</button>
+        <h2 id="text"></h2>
+        <img src="siba1.png" alt="" id="siba1" />
+        <img src="siba2.png" alt="" id="siba2" />
+        <img src="siba3.png" alt="" id="siba3" />
+        <img src="siba4.png" alt="" id="siba4" />
+        <img src="siba5.png" alt="" id="siba5" />
+        <img src="siba6.png" alt="" id="siba6" />
+        <img src="siba7.png" alt="" id="siba7" />
+    </body>
+    <script>
+        const nadpis = document.querySelector("#nadpis"),
+            text = document.querySelector("#text"),
+            tlacitko = document.querySelector("#tlacitko"),
+            input = document.querySelector("#input")
+
+        let siba1 = document.querySelector("#")
+
+        // const seznamSlov = ["hokus", "pokus", "stuff"]
+        // let hadaneSlovo = seznamSlov[Math.floor(Math.random() * seznamSlov.length)]
+        const seznamSlov = ["hokus", "pokus", "letadlo", "nevim", "nic"]
+        let hadaneSlovo =
+            seznamSlov[Math.floor(Math.random() * seznamSlov.length)]
+        console.log(hadaneSlovo)
+
+        let odpoved = []
+
+        for (let i = 0; i < hadaneSlovo.length; i++) {
+            odpoved[i] = "_"
+        }
+
+        for (let i = 0; i < odpoved.length; i++) {
+            text.innerText += odpoved[i]
+        }
+
+        tlacitko.addEventListener("click", hadani)
+
+        function hadani() {
+            let pismeno = input.value
+            input.value = ""
+            for (let i = 0; i < hadaneSlovo.length; i++) {
+                if (pismeno === hadaneSlovo[i]) {
+                    odpoved[i] = pismeno
+                }
+            }
+            text.innerText = ""
+            for (let i = 0; i < odpoved.length; i++) {
+                text.innerText += odpoved[i]
+            }
+        }
+    </script>
+</html>

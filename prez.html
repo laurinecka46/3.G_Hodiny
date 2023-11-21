@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prezenčka</title>
+    <script src="prezencka.js" defer></script>
+</head>
+<body>
+    <div>
+        <h1 class="main-header">Kolik je tu Vítečků Buřilů?</h1>
+    </div>
+    <ul id="seznamik"></ul>
+</body>
+<script>
+    let cislo = window.prompt("Kolik Vítečků dnes dorazí do školy?");
+let list = document.getElementById("seznamik");
+
+for(let i = 0; i < cislo; i++) {
+    let listItem = document.createElement("li")
+    listItem.textContent = ("Víteček tady");
+    list.appendChild(listItem);
+}
+</script>
+</html>

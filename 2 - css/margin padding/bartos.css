@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+.tabule {
+    background-color: green;
+    display: block;
+    border: solid 15px rgb(139, 96, 3);
+    width: 800px;
+    height: 500px;
+}
+
+.text {
+    font-family: Oswald;
+    font-size: 40px;
+    color: white;
+}
+
+.nic {
+    padding-top: 25px;
+    padding-left: 50px;
+}
+
+.bart {
+    position: relative;
+    left: 410px;
+    bottom: 220px;
+}

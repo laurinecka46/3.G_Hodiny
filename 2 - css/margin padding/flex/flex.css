@@ -1,0 +1,43 @@
+    body {
+        margin: 0;
+        padding: 0;
+    }
+.red {
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+  
+}
+.green {
+    background-color: green;
+
+}
+.main-container {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+}
+.red:hover {
+    background-color: purple;
+    width: 200px;
+    height: 200px;
+}
+
+.main-container div {
+    color: black;
+}
+
+.cont:nth-child(2) {
+    color: white;
+}
+
+.blue:hover::after {
+    content: " Text";
+    color: white;
+}
+
